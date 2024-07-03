@@ -7,13 +7,14 @@
     <title>Jarditou</title>
   </head>
   <body>
-    <a href="index.html"
-      ><img
+    <a href="index.html">
+      <img
         src="jarditou_src/images/jarditou_logo.jpg"
         alt="Logo Jarditou"
         title="Logo Jarditou"
         id="logojarditou"
-    /></a>
+      />
+    </a>
     <nav>
       <h4>La qualité depuis 70 ans</h4>
       <ul>
@@ -35,73 +36,87 @@
     <form>
       <fieldset>
         <legend>Vos coordonnées</legend>
-        <label for="form_name"
-          >Votre nom*
-          <input type="text" id="form_name" name="form_name" /></label
-        ><br />
-        <label for="form_f_name"
-          >Votre prénom* <input type="text" id="form_f_name" name="form_f_name"
-        /></label>
+        <label for="form_name">Votre nom*</label>
+        <input type="text" id="form_name" name="form_name" required /><br />
+        <label for="form_f_name">Votre prénom*</label>
+        <input type="text" id="form_f_name" name="form_f_name" required /><br />
         <div class="choix_test">
-          <label>Sexe* </label>
-          <label class="radio">
-            <input type="radio" name="answer" id="radio_btn_f" />
+          <span>Sexe*</span>
+          <label class="radio" for="radio_btn_f">
+            <input
+              type="radio"
+              name="choixsexe"
+              id="radio_btn_f"
+              value="Féminin"
+              required
+            />
             Féminin
           </label>
-          <label class="radio">
-            <input type="radio" name="answer" id="radio_btn_h" />
+          <label class="radio" for="radio_btn_h">
+            <input
+              type="radio"
+              name="choixsexe"
+              id="radio_btn_h"
+              value="Masculin"
+              required
+            />
             Masculin
           </label>
         </div>
-        <label for="form_bday"
-          >Date de naissance*
-          <input type="date" name="form_bday" id="form_bday" />
-        </label>
+
         <br />
-        <label for="form_post"
-          >Code postal*
-          <input type="text" id="form_post" name="form_post" /></label
-        ><br />
-        <label for="form_adresse"
-          >Adresse*
-          <input type="text" id="form_adresse" name="form_adresse" /></label
-        ><br />
+        <label for="form_bday">Date de naissance*</label>
+        <input type="date" name="form_bday" id="form_bday" required /><br />
+        <label for="form_post">Code postal*</label>
+        <input type="text" id="form_post" name="form_post" required /><br />
+        <label for="form_adresse">Adresse*</label>
+        <input
+          type="text"
+          id="form_adresse"
+          name="form_adresse"
+          required
+        /><br />
         <label for="form_email">Email*</label>
         <input
           type="email"
           id="form_email"
           name="form_email"
           placeholder="dave.loper@afpa.fr"
-        />
+          required
+        /><br />
       </fieldset>
-    </form>
-    <form>
       <fieldset>
         <legend>Votre demande</legend>
-        <label for="form_sujet">Sujet* </label>
-        <select name="form_sujet" id="form_sujet">
-          <option>Veuillez séléctionner un sujet</option>
+        <label for="form_sujet">Sujet*</label>
+        <select name="form_sujet" id="form_sujet" required>
+          <option>Veuillez sélectionner un sujet</option>
           <option>1</option>
           <option>2</option>
           <option>3</option>
         </select>
         <br />
-        <label for="form_question">Votre question* </label>
-        <textarea name="form_question" id="form_question" rows="3" cols="19">
-        </textarea>
+        <label for="form_question">Votre question*</label>
+        <textarea
+          name="form_question"
+          id="form_question"
+          rows="3"
+          cols="19"
+          required
+        ></textarea>
+        <br />
       </fieldset>
+      <br />
+      <input type="checkbox" id="check_accept" name="check_accept" required />
+      <label for="check_accept"
+        >* J'accepte le traitement informatique de ce formulaire</label
+      ><br /><br />
+      <button name="envoyer_form" id="envoyer_form">Envoyer</button>
+      <button name="annuler_form" id="annuler_form">Annuler</button>
     </form>
-    <br />
-    <input type="checkbox" id="check_accept" name="check_accept" />
-    <label for="envoyer_form">
-      * J'accepte le traiement imformatique de ce formulaire</label
-    ><br /><br />
-    <button name="envoyer_form" id="envoyer_form">Envoyer</button>
-    <button name="annuler_form" id="annuler_form">Annuler</button>
     <footer>
       <hr />
       <ul>
-        <li><a href="#">Mention légales</a></li>
+        <li><a href="#">Mentions légales</a></li>
         <li><a href="#">Horaires</a></li>
         <li><a href="#">Plan du site</a></li>
       </ul>
