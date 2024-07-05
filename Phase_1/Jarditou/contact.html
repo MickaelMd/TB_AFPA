@@ -32,96 +32,91 @@
       title="Image Promotion"
       id="photo_promo"
     />
-    <section>
-      <h1>Contact</h1>
-      <hr />
-      <p>* Ces zones sont obligatoires</p>
-      <form>
-        <fieldset>
-          <legend>Vos coordonnées</legend>
-          <label for="form_name">Votre nom*</label>
-          <input type="text" id="form_name" name="form_name" required /><br />
-          <label for="form_f_name">Votre prénom*</label>
-          <input
-            type="text"
-            id="form_f_name"
-            name="form_f_name"
-            required
-          /><br />
-          <div class="choix_test">
-            <span>Sexe*</span>
-            <label class="radio" for="radio_btn_f">
-              <input
-                type="radio"
-                name="choixsexe"
-                id="radio_btn_f"
-                value="Féminin"
-                required
-              />
-              Féminin
-            </label>
-            <label class="radio" for="radio_btn_h">
-              <input
-                type="radio"
-                name="choixsexe"
-                id="radio_btn_h"
-                value="Masculin"
-                required
-              />
-              Masculin
-            </label>
-          </div>
 
-          <br />
-          <label for="form_bday">Date de naissance*</label>
-          <input type="date" name="form_bday" id="form_bday" required /><br />
-          <label for="form_post">Code postal*</label>
-          <input type="text" id="form_post" name="form_post" required /><br />
-          <label for="form_adresse">Adresse*</label>
-          <input
-            type="text"
-            id="form_adresse"
-            name="form_adresse"
-            required
-          /><br />
-          <label for="form_email">Email*</label>
-          <input
-            type="email"
-            id="form_email"
-            name="form_email"
-            placeholder="dave.loper@afpa.fr"
-            required
-          /><br />
-        </fieldset>
-        <fieldset>
-          <legend>Votre demande</legend>
-          <label for="form_sujet">Sujet*</label>
-          <select name="form_sujet" id="form_sujet" required>
-            <option>Veuillez sélectionner un sujet</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-          </select>
-          <br />
-          <label for="form_question">Votre question*</label>
-          <textarea
-            name="form_question"
-            id="form_question"
-            rows="3"
-            cols="19"
-            required
-          ></textarea>
-          <br />
-        </fieldset>
+    <h1>Contact</h1>
+    <hr />
+    <p>* Ces zones sont obligatoires</p>
+    <form>
+      <fieldset>
+        <legend>Vos coordonnées</legend>
+        <label for="form_name">Votre nom*</label>
+        <input type="text" id="form_name" name="form_name" required /><br />
+        <label for="form_f_name">Votre prénom*</label>
+        <input type="text" id="form_f_name" name="form_f_name" required /><br />
+        <div class="choix_test">
+          <span>Sexe*</span>
+          <label class="radio" for="radio_btn_f">
+            <input
+              type="radio"
+              name="choixsexe"
+              id="radio_btn_f"
+              value="Féminin"
+              required
+            />
+            Féminin
+          </label>
+          <label class="radio" for="radio_btn_h">
+            <input
+              type="radio"
+              name="choixsexe"
+              id="radio_btn_h"
+              value="Masculin"
+              required
+            />
+            Masculin
+          </label>
+        </div>
+
         <br />
-        <input type="checkbox" id="check_accept" name="check_accept" required />
-        <label for="check_accept"
-          >* J'accepte le traitement informatique de ce formulaire</label
-        ><br /><br />
-        <button name="envoyer_form" id="envoyer_form">Envoyer</button>
-        <button name="annuler_form" id="annuler_form">Annuler</button>
-      </form>
-    </section>
+        <label for="form_bday">Date de naissance*</label>
+        <input type="date" name="form_bday" id="form_bday" required /><br />
+        <label for="form_post">Code postal*</label>
+        <input type="text" id="form_post" name="form_post" required /><br />
+        <label for="form_adresse">Adresse*</label>
+        <input
+          type="text"
+          id="form_adresse"
+          name="form_adresse"
+          required
+        /><br />
+        <label for="form_email">Email*</label>
+        <input
+          type="email"
+          id="form_email"
+          name="form_email"
+          placeholder="dave.loper@afpa.fr"
+          required
+        /><br />
+      </fieldset>
+      <fieldset>
+        <legend>Votre demande</legend>
+        <label for="form_sujet">Sujet*</label>
+        <select name="form_sujet" id="form_sujet" required>
+          <option>Veuillez sélectionner un sujet</option>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+        </select>
+        <br />
+        <label for="form_question">Votre question*</label>
+        <textarea
+          name="form_question"
+          id="form_question"
+          rows="3"
+          cols="19"
+          required
+        ></textarea>
+        <br />
+      </fieldset>
+      <br />
+      <input type="checkbox" id="check_accept" name="check_accept" required />
+      <label for="check_accept"
+        >* J'accepte le traitement informatique de ce formulaire</label
+      ><br /><br />
+      <button name="envoyer_form" id="envoyer_form">Envoyer</button>
+      <button name="annuler_form" id="annuler_form">Annuler</button>
+    </form>
+
     <hr />
     <footer>
       <ul>
