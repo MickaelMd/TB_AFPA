@@ -1,4 +1,4 @@
-PARTIE 1 – LES VARIABLES (https://ncode.amorce.org/ressources/Pool/TB_DEV/Accueil_Ecrire_algorithme_1/Exercices1.pdf) :
+PARTIE 1 – LES VARIABLES (https://ncode.amorce.org/ressources/Pool/TB_DEV/Accueil_Ecrire_algorithme_1/Exercices1.pdf) : ←
 
 Exercice 1.1 : A = 3; B = 4
 
@@ -10,11 +10,12 @@ Exercice 1.4 : A = 13; B = 13; C = 13
 
 Exercice 1.5 : A = 2; B = 2; (Les valeurs ne s'échangent pas, elles se copient, si on inverse "B ← A, A ← B" on obtient A = 5; B = 5)
 
-Exercice 1.6 : 
+Exercice 1.6 : A ←
+               B ← 
 
 Exercice 1.7 : 
 
 Exercice 1.8 : A = "423"; B = "12"; C = "42312"
 
-Exercice 1.9 : A = "423"; B = "12"; C = "42312" (& concaténation)
+Exercice 1.9 : A = "423"; B = "12"; C = "4" (& est pour manipuler les bits en javascript)
 
