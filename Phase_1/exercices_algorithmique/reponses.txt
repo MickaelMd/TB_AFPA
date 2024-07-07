@@ -21,3 +21,88 @@ Exercice 1.8 : A = "423"; B = "12"; C = "42312" (fonctionne en javascript, mais 
 
 Exercice 1.9 : A = "423"; B = "12"; C = "4" (& est pour manipuler les bits en javascript)
 
+
+
+
+PARTIE 2 – LECTURE ET ECRITURE (https://ncode.amorce.org/ressources/Pool/TB_DEV/Accueil_Ecrire_algorithme_1/Exercices2.pdf) : ←
+
+Exercice 2.1 :
+
+Exercice 2.2 :
+
+Exercice 2.3 :
+
+Exercice 2.4 :
+
+
+
+
+PARTIE 3 – LES TESTS (https://ncode.amorce.org/ressources/Pool/TB_DEV/Accueil_Ecrire_algorithme_1/Exercices3.pdf) : ←
+
+Exercice 3.1 :
+
+Exercice 3.2 :
+
+Exercice 3.3 :
+
+Exercice 3.4 :
+
+Exercice 3.5 :
+
+Exercice 3.6 :
+
+
+
+
+PARTIE 4 – ENCORE DE LA LOGIQUE (https://ncode.amorce.org/ressources/Pool/TB_DEV/Accueil_Ecrire_algorithme_1/Exercices4.pdf) : ←
+
+Exercice 4.1 :
+
+Exercice 4.2 :
+
+Exercice 4.3 :
+
+Exercice 4.4 :
+
+Exercice 4.5 :
+
+Exercice 4.6 :
+
+Exercice 4.7 :
+
+Exercice 4.8 :
+
+
+
+
+PARTIE 5 – LES BOUCLES (https://ncode.amorce.org/ressources/Pool/TB_DEV/Accueil_Ecrire_algorithme_1/Exercices5.pdf) : ←
+
+Exercice 5.1 :
+
+Exercice 5.2:
+
+Exercice 5.3:
+
+Exercice 5.4:
+
+Exercice 5.5 :
+
+Exercice 5.6 :
+
+Exercice 5.7 :
+
+Exercice 5.8 :
+
+Exercice 5.9 :
+
+Exercice 5.10 :
+
+
+
+Reccource : 
+
+Les variables : https://ncode.amorce.org/ressources/Pool/TB_DEV/Accueil_Ecrire_algorithme_1/Partie1.pdf
+Lecture - Ecriture : https://ncode.amorce.org/ressources/Pool/TB_DEV/Accueil_Ecrire_algorithme_1/Partie2.pdf
+Les Tests : https://ncode.amorce.org/ressources/Pool/TB_DEV/Accueil_Ecrire_algorithme_1/Partie3.pdf
+Encore un peu de logique : https://ncode.amorce.org/ressources/Pool/TB_DEV/Accueil_Ecrire_algorithme_1/Partie4.pdf
+Les boucles : https://ncode.amorce.org/ressources/Pool/TB_DEV/Accueil_Ecrire_algorithme_1/Partie5.pdf
