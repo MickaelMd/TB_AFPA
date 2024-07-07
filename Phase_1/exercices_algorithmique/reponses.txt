@@ -13,9 +13,11 @@ Exercice 1.5 : A = 2; B = 2; (Les valeurs ne s'échangent pas, elles se copient,
 Exercice 1.6 : A ←
                B ← 
 
-Exercice 1.7 : 
+Exercice 1.7 : A ←
+               B ←
+               C ←
 
-Exercice 1.8 : A = "423"; B = "12"; C = "42312"
+Exercice 1.8 : A = "423"; B = "12"; C = "42312" (fonctionne en javascript, mais pas possible en nocode selon le doc)
 
 Exercice 1.9 : A = "423"; B = "12"; C = "4" (& est pour manipuler les bits en javascript)
 
