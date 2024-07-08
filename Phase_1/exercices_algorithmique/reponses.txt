@@ -161,7 +161,13 @@ Exercice 3.6 : Variables Age
 
 PARTIE 4 – ENCORE DE LA LOGIQUE (https://ncode.amorce.org/ressources/Pool/TB_DEV/Accueil_Ecrire_algorithme_1/Exercices4.pdf) : ←
 
-Exercice 4.1 :
+Exercice 4.1 : Si Tuto <= toto +4 et Tata <> "ok" alors
+               Alors 
+               Tutu ← Tutu - 1
+               Sinon 
+               Tutu ← Tutu + 1
+               Fin
+              
 
 Exercice 4.2 :
 
