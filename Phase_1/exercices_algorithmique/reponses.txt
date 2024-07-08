@@ -82,15 +82,79 @@ Exercice 3.1 : Variables UserNum
                         Ecrire : Le nombre est négatif
                 Fin 
 
-Exercice 3.2 :
+Exercice 3.2 : Variables UserNum1 UserNum2
+               Début
+               Ecrire : Donne moi deux nombres "" ""
+               Lire : UserNum1
+               Lire : UserNum2
+               Si UserNum1 > 0 ou UserNum2 > 0 
+               Alors
+               Ecrire : Le produit est positif 
+               Sinon
+               Ecrire : Le produit est négatif 
+               Fin
 
-Exercice 3.3 :
+Exercice 3.3 : Variables A B C
+               Ecrire : Donne moi tois noms "" "" ""
+               Lire : A
+               Lire : B
+               Lire : C
+               Si A < B et B < C 
+               Alors
+               Ecrire : Les noms sont rangés en ordre alphabétique
+                    Sinon
+               Ecrire : Les noms ne sont pas rangés en ordres alphabétique.
+               Fin 
 
-Exercice 3.4 :
 
-Exercice 3.5 :
+Exercice 3.4 : Variables Num
+               Ecrire : Donne moi un nombre ""
+               Lire : nombre
+               Si Num < 0 Alors
+               Ecrire : Le nombre est négatif 
+               Fin si
+               Si Num > 0 Alors
+               Ecrire : Le nombre est positif
+               Fin si
+               Si Num = 0 Alors
+               Ecrire : Le nombre est égal a zéro
+               Fin
 
-Exercice 3.6 :
+
+Exercice 3.5 : Variables UserNum1 UserNum2
+               Début
+               Ecrire : Donne moi deux nombres "" ""
+               Lire : UserNum1
+               Lire : UserNum2
+               Si UserNum1 = 0 ou UserNum2 = 0 Alors
+               Ecrire : Le produit est nul
+               Si UserNum1 > 0 ou UserNum2 > 0 
+               Alors
+               Ecrire : Le produit est positif 
+               Sinon
+               Ecrire : Le produit est négatif 
+               Fin
+
+Exercice 3.6 : Variables Age
+               Début
+               Ecrire : Quelle est l'age de l'enfant ""
+               Lire : Age de l'enfant 
+               Si age >= 6 et <= 7 
+                Alors
+               Ecrire : "Poussin"
+               Sinon
+               Si age >= 8 et <=9
+               Alors
+                Ecrire : "Pupille"
+               Sinon
+               Si age >= 10 et <= 11
+               Alors
+                Ecrire : "Minime"
+                Sinon 
+                Si age >= 12 
+                Alors
+               Ecrire : "Cadet" 
+               Fin
 
 
 
