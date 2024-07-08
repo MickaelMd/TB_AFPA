@@ -10,36 +10,77 @@ Exercice 1.4 : A = 13; B = 13; C = 13
 
 Exercice 1.5 : A = 2; B = 2; (Les valeurs ne s'échangent pas, elles se copient, si on inverse "B ← A, A ← B" on obtient A = 5; B = 5)
 
-Exercice 1.6 : A ←
-               B ← 
+Exercice 1.6 : C ← A
+               A ← B
+               B ← C
 
-Exercice 1.7 : A ←
-               B ←
-               C ←
+Exercice 1.7 : D ← C
+               C ← B
+               B ← A
+               A ← D
 
 Exercice 1.8 : A = "423"; B = "12"; C = "42312" (fonctionne en javascript, mais pas possible en nocode selon le doc)
 
-Exercice 1.9 : A = "423"; B = "12"; C = "4" (& est pour manipuler les bits en javascript)
+Exercice 1.9 : A = "423"; B = "12"; C = "42312" ou "4" (Erreur & est pour manipuler les bits en javascript)
 
 
 
 
 PARTIE 2 – LECTURE ET ECRITURE (https://ncode.amorce.org/ressources/Pool/TB_DEV/Accueil_Ecrire_algorithme_1/Exercices2.pdf) : ←
 
-Exercice 2.1 :
+Exercice 2.1 : Cela donne La valeur de val '231'
+               Et le résulat de Double qui est la valeur de val * 2 '462'
 
-Exercice 2.2 :
+Exercice 2.2 : Variables UserN Calcule
+               Début 
+               Ecrire "nombre d'utilisateur" 
+               Lire "nombre d'utilisateur"
+               UnerN ← "nombre d'utilisateur"
+               Calcule ← UserN * UserN
+               Ecrire Calcule
+               Fin
 
-Exercice 2.3 :
 
-Exercice 2.4 :
+Exercice 2.3 : Variables PrixFinal NumArticle PrixHt Tva
+               Début
+               Ecrire "prix ht" "nombres d'articles"
+               Lire "prix ht" "nombres d'articles"
+               NumArticle ← "nombrearcticles"
+               PrixHt ← "PrixHt"
+               Tva ← 20%
+               PrixFinal ← PrixHt + Tva * NymArticle
+               Ecrire PrixFinal
+               Fin
+
+
+Exercice 2.4 : Variables variante1 variante2 variante3 variante4
+               Début
+               variante1 ← "belle marquise" 
+               variante2 ← "vos beaux yeux"
+               variante3 ← "me font mourir"
+               variante4 ← "d'amour"
+               Ecrire variante1 & variante2 & variante3 & variante4
+               Ecrire variante4 & variante3 & variante2 & variante1
+               Ecrire variante2 & variante3 & variante1 & variante4
+               Ecrire variante3 & variante4 & variante1 & variante2
+               Fin
 
 
 
 
 PARTIE 3 – LES TESTS (https://ncode.amorce.org/ressources/Pool/TB_DEV/Accueil_Ecrire_algorithme_1/Exercices3.pdf) : ←
 
-Exercice 3.1 :
+Exercice 3.1 : Variables UserNum 
+               Début
+               Ecrire "nombre d'utilisateur"
+                    Lire "nombre d'utilisateur"
+               UserNum ← "nombre d'utilisateur"
+               Si UserNum >= 0
+                    Alors
+                        Ecrire : Le nombre est positif
+                    Sinon
+                        Ecrire : Le nombre est négatif
+                Fin 
 
 Exercice 3.2 :
 
