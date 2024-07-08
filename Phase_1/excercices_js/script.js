@@ -93,8 +93,10 @@
 let prenom = "";
 let compteur = 0;
 
-while (prenom == "") {
+do {
   prenom = prompt("Prénom ?");
   compteur++;
-}
+} while (prenom !== "");
 console.log(compteur);
+
+// ----------------------------------------------------------------------------
