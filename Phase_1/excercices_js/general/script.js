@@ -131,22 +131,14 @@
 
 // --------------------------------------------------------------------------------
 
-// let number;
-// let multiple;
+// let n = parseInt(prompt("Donne moi un nombre !"));
+// let x = parseInt(prompt("Multiplier par quel nombre ?"));
+// let i;
 // let result;
-// number = parseInt(prompt("Donne moi un nombre !"));
-// multiple = parseInt(prompt("Multiplier par ?"));
-
-// do {
-//   result = number * multiple;
-//   console.log(result);
-//   number--;
-// } while (number != 0);
-// {
-//   console.log(number);
+// for (i = 1; i <= n; i++) {
+//   result = i * x;
+//   console.log(i + " x " + x + " = " + result);
 // }
-
-// console.log();
 
 // -----------a revenir---------------------------------------------------
 
@@ -170,7 +162,7 @@
 
 // ------Fonctions----------------------------------------------------------
 
-// Dans un autre fichier function/
+// Dans un autre fichier (function/)
 
 // ------Tableaux---------------------------------------------------------
 
