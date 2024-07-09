@@ -154,7 +154,7 @@
 // let count = 0;
 // mot = prompt("Ecrit moi un mot");
 // for (let i = 0; i < mot.length; i++) {
-//   let voyelle = mot[i].toLowerCase();
+//   let voyelle = mot[i];
 //   if (
 //     voyelle === "a" ||
 //     voyelle === "e" ||
@@ -170,26 +170,22 @@
 
 // ------Fonctions----------------------------------------------------------
 
-// function
-
-// ---------------------------------------------------------------------
-
-// function strtok(str1, str2, n) {
-
-// }
+// Dans un autre fichier function/
 
 // ------Tableaux---------------------------------------------------------
 
-let tableau;
-let taille;
+// let tableau;
+// let taille;
 
-taille = parseInt(prompt("Taille du tableau ?"));
-tableau = [];
-i = taille;
-do {
-  tableau.push(prompt("mot a ajouter ?"));
-  taille = taille - 1;
-} while (taille > 0);
-console.log(tableau);
+// taille = parseInt(prompt("Taille du tableau ?"));
+// tableau = [];
+// i = taille;
+// do {
+//   tableau.push(prompt("mot a ajouter ?"));
+//   taille = taille - 1;
+// } while (taille > 0);
+// console.log(tableau);
 
-// ------Le D.O.M. et l'objet---------------------------------------------
+// -----------Les objets natifs----------------------------------------------
+
+// Même chose que le tableau avec window.prompt + il s'arrête quand l'user entre 0
