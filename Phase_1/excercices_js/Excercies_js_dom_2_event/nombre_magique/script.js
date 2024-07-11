@@ -46,26 +46,31 @@
 
 let input = "";
 let button = "";
-let number = rnumber(1, 100);
+const number = rnumber(1, 100);
 
 function rnumber(min, max) {
   return Math.round(Math.random() * (max - min) + min);
 }
 
 function getvalue() {
-  var n = document.getElementById("textBox1").value;
-  console.log(n);
+  let input = document.getElementById("textBox1").value;
+  console.log(input);
 }
-
+let testtour = 100;
 function verif() {
-  if (input == number) {
-    console.log("good");
-  } else if (input < number) {
-    console.log("trop petit");
-  } else if (input > number) {
-    console.log("trop grand");
+  while (testtour > 0) {
+    if (input === number) {
+      console.log("win");
+    } else if (input < number) {
+      testtour--;
+      console.log("trop petit");
+    } else if (input > number) {
+      testtour--;
+      console.log("trop grand");
+    }
   }
 }
 
+console.log(testtour);
 console.log("chiffre " + number);
 console.log(input);
