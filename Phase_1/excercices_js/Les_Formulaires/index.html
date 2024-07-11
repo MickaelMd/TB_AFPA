@@ -10,24 +10,24 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/style.css" />
-    <script src="assets/script.js" defer></script>
     <title>Document</title>
   </head>
   <body>
-    <h3>Vos coordonnées :</h3>
-    <h4>* Ces zones sont obligatoires pour renvoyer le formulaire.</h4>
-    <form>
-      <label for="f_societe">Société :</label>
+    <div id="mouse-tracker"></div>
+    <form id="contactForm">
+      <h3>Vos coordonnées :</h3>
+      <h4>* Ces zones sont obligatoires pour renvoyer le formulaire.</h4>
+      <label for="f_societe"><span>*</span> Société :</label>
       <input type="text" id="societe" name="societe" /><br />
-      <label for="f_personne">Personne à contacter :</label>
+      <label for="f_personne"><span>*</span> Personne à contacter :</label>
       <input type="text" id="f_personne" name="f_personne" /><br />
       <label for="f_adresse">Adresse de l'entreprise :</label>
       <textarea name="f_adresse" id="f_adresse"></textarea><br />
-      <label for="f_postal">Code Postal :</label>
+      <label for="f_postal"><span>*</span> Code Postal :</label>
       <input type="text" id="f_postal" name="f_postal" /><br />
-      <label for="f_ville">Ville :</label>
+      <label for="f_ville"><span>*</span> Ville :</label>
       <input type="text" id="f_ville" name="f_ville" /><br />
-      <label for="f_email">Email :</label>
+      <label for="f_email"><span>*</span> Email :</label>
       <input type="text" id="f_email" name="f_email" /><br />
       <label for="f_phone">Téléphone :</label>
       <input type="text" id="f_phone" name="f_phone" /><br />
@@ -58,8 +58,9 @@
         <option value="Autres...">Autres...</option>
       </select>
       <br />
-      <button name="btn_submit" id="btn_submit">Envoyer</button>
+      <button type="submit" name="btn_submit" id="btn_submit">Envoyer</button>
       <button type="reset" name="btn_delete" id="btn_delete">Effacer</button>
     </form>
+    <script src="assets/script.js" defer></script>
   </body>
 </html>
