@@ -18,19 +18,19 @@
     <h4>* Ces zones sont obligatoires pour renvoyer le formulaire.</h4>
     <form>
       <label for="f_societe">Société :</label>
-      <input type="text" id="societe" name="societe" required /><br />
+      <input type="text" id="societe" name="societe" /><br />
       <label for="f_personne">Personne à contacter :</label>
-      <input type="text" id="f_personne" name="f_personne" required /><br />
+      <input type="text" id="f_personne" name="f_personne" /><br />
       <label for="f_adresse">Adresse de l'entreprise :</label>
-      <textarea name="f_adresse" id="f_adresse" required></textarea><br />
+      <textarea name="f_adresse" id="f_adresse"></textarea><br />
       <label for="f_postal">Code Postal :</label>
-      <input type="text" id="f_postal" name="f_postal" required /><br />
+      <input type="text" id="f_postal" name="f_postal" /><br />
       <label for="f_ville">Ville :</label>
-      <input type="text" id="f_ville" name="f_ville" required /><br />
+      <input type="text" id="f_ville" name="f_ville" /><br />
       <label for="f_email">Email :</label>
-      <input type="text" id="f_email" name="f_email" required /><br />
+      <input type="text" id="f_email" name="f_email" /><br />
       <label for="f_phone">Téléphone :</label>
-      <input type="text" id="f_phone" name="f_phone" required /><br />
+      <input type="text" id="f_phone" name="f_phone" /><br />
       <label for="f_envir"
         >Sélectionnez l'environnement technique du projet :</label
       >
@@ -38,9 +38,7 @@
         type="text"
         id="message"
         ng-model="htmlcontent"
-        required="required"
         name="message"
-        required
       ></textarea
       ><br />
       <select name="f_envir_bis" id="f_envir_bis">
