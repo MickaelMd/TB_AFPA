@@ -10,6 +10,7 @@ function getvalue() {
   input = document.getElementById("textBox1").value;
   verif();
 }
+document.getElementById("submit").addEventListener("click", getvalue);
 
 function verif() {
   if (testtour > 0) {
