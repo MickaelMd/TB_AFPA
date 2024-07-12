@@ -4,7 +4,7 @@ html {
   margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
-  background-color: rgb(0, 5, 49);
+  background: #1b1b1b;
 }
 header {
   margin-left: 100px;
@@ -22,10 +22,10 @@ form {
   padding: 50px;
   max-width: 600px;
   margin: 50px auto;
-  background: rgba(255, 255, 255, 0.37);
+  background: rgba(255, 255, 255, 0.164);
   border-radius: 16px;
-  backdrop-filter: blur(6.1px);
-  -webkit-backdrop-filter: blur(6.1px);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   z-index: 100;
 }
 
@@ -50,18 +50,29 @@ select {
   border-radius: 10px;
   border: 0px;
 }
+input:focus,
+textarea:focus,
+select:focus,
+input:hover,
+textarea:hover,
+select:hover {
+  background-color: rgb(180, 180, 180);
+  transition: 110ms;
+}
 
 #btn_submit,
 #btn_delete {
-  background-color: rgb(0, 187, 47);
+  background-color: rgba(0, 187, 47, 0.664);
   color: black;
   padding: 10px 15px 10px 15px;
+  margin-top: 10px;
   border-radius: 10px;
   font-weight: 800;
   border: 0;
 }
 #btn_delete {
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0.664);
+  margin-left: 10px;
 }
 #mouse-tracker {
   width: 200px;
@@ -69,7 +80,7 @@ select {
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
   position: fixed;
-  /* z-index: ; */
+  /* z-index: 1; */
   filter: blur(100px);
   transform: translate(-50%, -50%);
   pointer-events: none;

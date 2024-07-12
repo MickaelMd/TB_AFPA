@@ -181,28 +181,26 @@
 // ------Les objets natifs------------------------------------------------
 
 let tab = [];
-let nvalue = 0;
-let somme;
-let moyenne;
 let uservalue;
+let somme = 0;
+let moyenne;
 let taille;
 
 do {
-  uservalue = parseInt(prompt("Nombre a rajouter ?"));
-  nvalue = nvalue + 1;
-  tab.push(uservalue);
+  uservalue = parseInt(prompt("Nombre à rajouter ?"));
+  if (uservalue > 0) {
+    tab.push(uservalue);
+  }
 } while (uservalue > 0);
 
-tab.pop();
+taille = tab.length;
 
-// console.log(tab[uservalue]);
+for (let i = 0; i < taille; i++) {
+  somme += tab[i];
+}
 
-// console.log([tab]);
-// console.log(tab);
-// console.log(nvalue);
-// console.log(tab.length);
+moyenne = somme / taille;
 
-moyenne = tab.sort() / tab.length;
-console.log(moyenne);
-
-console.log(tab.sort());
+console.log("Nombre de valeurs: " + taille);
+console.log("Somme: " + somme);
+console.log("Moyenne: " + moyenne);
