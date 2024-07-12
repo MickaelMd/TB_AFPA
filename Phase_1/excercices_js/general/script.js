@@ -178,6 +178,31 @@
 // } while (taille > 0);
 // console.log(tableau);
 
-// -----------Les objets natifs----------------------------------------------
+// ------Les objets natifs------------------------------------------------
 
-// Même chose que le tableau avec window.prompt + il s'arrête quand l'user entre 0
+let tab = [];
+let nvalue = 0;
+let somme;
+let moyenne;
+let uservalue;
+let taille;
+
+do {
+  uservalue = parseInt(prompt("Nombre a rajouter ?"));
+  nvalue = nvalue + 1;
+  tab.push(uservalue);
+} while (uservalue > 0);
+
+tab.pop();
+
+// console.log(tab[uservalue]);
+
+// console.log([tab]);
+// console.log(tab);
+// console.log(nvalue);
+// console.log(tab.length);
+
+moyenne = tab.sort() / tab.length;
+console.log(moyenne);
+
+console.log(tab.sort());

@@ -169,9 +169,39 @@ Exercice 4.1 : Si Tuto <= toto +4 et Tata <> "ok" alors
                Fin
               
 
-Exercice 4.2 :
+Exercice 4.2 : Debut
+               Ecrire Quelle heure est il ?
+               Lire UserHeure
+               Ecrire Quelle minute ?
+               Lire UserMin
+               Si
+               UserMin + 1 >= 61 
+               Alors
+               UserHeure + 1
+               Sinon
+               UserMin + 1
+               Ecrire "Dans une minutte, il sera " + "UserHeure" + " : " + "UserMin"
+               FIN
+               
 
-Exercice 4.3 :
+
+Exercice 4.3 : Debut
+               Ecrire Quelle heure est il ?
+               Lire UserHeure
+               Ecrire Quelle minute ?
+               Lire UserMin
+               Ecrire Quelle seconde ?
+               Lire UserSec
+               Si
+               UserSec + 1 >= 61 
+               Alors
+               UserNin + 1
+               Si 
+               UserMin >= 61
+               Alors
+               UserHeure + 1
+               Ecrire "Dans une minutte, il sera " + "UserHeure" + " : " + "UserMin " + "et " + UserSec
+               FIN
 
 Exercice 4.4 :
 

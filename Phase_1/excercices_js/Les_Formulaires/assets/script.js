@@ -24,12 +24,12 @@ function checkform() {
   let email = document.getElementById("f_email").value;
 
   if (societe.length < 1) {
-    alert("La 'Société' doit comporter au moins 1 caractère");
+    alert("La 'Société' doit comporter au moins 1 caractère.");
     return false;
   }
 
   if (personne.length < 1) {
-    alert("La 'Personne à contacter' doit comporter au moins 1 caractère..");
+    alert("La 'Personne à contacter' doit comporter au moins 1 caractère.");
     return false;
   }
 
