@@ -61,3 +61,19 @@ document.addEventListener("DOMContentLoaded", function () {
     mouseTracker.style.top = souris.clientY + "px";
   });
 });
+
+// -
+
+const btntoggle = document.getElementById("btn_toggle");
+
+btntoggle.addEventListener("click", () => {
+  const flare = document.getElementById("mouse-tracker");
+
+  if (flare.classList.contains("mouse_on")) {
+    flare.classList.remove("mouse_on");
+    flare.classList.add("mouse_off");
+  } else {
+    flare.classList.remove("mouse_off");
+    flare.classList.add("mouse_on");
+  }
+});

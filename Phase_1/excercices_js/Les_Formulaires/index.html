@@ -13,11 +13,12 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="mouse-tracker"></div>
+    <div id="mouse-tracker" class="mouse_on"></div>
+    <button id="btn_toggle">TEST</button>
     <form id="contactForm">
       <h3>Vos coordonnées :</h3>
       <h4>* Ces zones sont obligatoires pour renvoyer le formulaire.</h4>
-      <label for="f_societe"><span>*</span> Société :</label>
+      <label for="societe"><span>*</span> Société :</label>
       <input type="text" id="societe" name="societe" /><br />
       <label for="f_personne"><span>*</span> Personne à contacter :</label>
       <input type="text" id="f_personne" name="f_personne" /><br />
@@ -31,7 +32,7 @@
       <input type="text" id="f_email" name="f_email" /><br />
       <label for="f_phone">Téléphone :</label>
       <input type="text" id="f_phone" name="f_phone" /><br />
-      <label for="f_envir"
+      <label for="message"
         >Sélectionnez l'environnement technique du projet :</label
       >
       <textarea
