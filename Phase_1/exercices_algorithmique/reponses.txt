@@ -203,7 +203,8 @@ Exercice 4.3 : Debut
                Ecrire "Dans une minutte, il sera " + "UserHeure" + " : " + "UserMin " + "et " + UserSec
                FIN
 
-Exercice 4.4 :
+Exercice 4.4 : 
+
 
 Exercice 4.5 :
 
