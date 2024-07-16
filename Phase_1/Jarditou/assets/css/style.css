@@ -63,3 +63,11 @@ h3 {
     display: none;
   }
 }
+
+.error {
+  color: red;
+}
+
+.fin_form {
+  margin-left: 10px;
+}

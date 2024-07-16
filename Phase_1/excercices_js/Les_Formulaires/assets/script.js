@@ -22,29 +22,42 @@ function checkform() {
   let postal = document.getElementById("f_postal").value;
   let ville = document.getElementById("f_ville").value;
   let email = document.getElementById("f_email").value;
+  let soc_error = document.getElementById("er_societe");
+  let per_error = document.getElementById("er_personne");
+  let postal_error = document.getElementById("er_postal");
+  let ville_error = document.getElementById("er_ville");
+  let mail_error = document.getElementById("er_email");
 
   if (societe.length < 1) {
     alert("La 'Société' doit comporter au moins 1 caractère.");
+    soc_error.textContent = "La 'Société' doit comporter au moins 1 caractère.";
     return false;
   }
 
   if (personne.length < 1) {
     alert("La 'Personne à contacter' doit comporter au moins 1 caractère.");
+    per_error.textContent =
+      "La 'Personne à contacter' doit comporter au moins 1 caractère.";
     return false;
   }
 
   if (!/^\d{5}$/.test(postal)) {
     alert("Le 'Code postal' doit comporter 5 caractères numériques.");
+    postal_error.textContent =
+      "Le 'Code postal' doit comporter 5 caractères numériques.";
     return false;
   }
 
   if (ville.length < 1) {
     alert("La 'Ville' doit comporter au moins 1 caractère.");
+    ville_error.textContent = "La 'Ville' doit comporter au moins 1 caractère.";
     return false;
   }
 
   if (!email.includes("@")) {
     alert("Le Email doit comporter au moins le caractère '@'.");
+    mail_error.textContent =
+      "Le Email doit comporter au moins le caractère '@'.";
     return false;
   }
 
