@@ -169,7 +169,8 @@ Exercice 4.1 : Si Tuto <= toto +4 et Tata <> "ok" alors
                Fin
               
 
-Exercice 4.2 : Debut
+Exercice 4.2 : Variables : UserHeure Usermin
+               Debut
                Ecrire Quelle heure est il ?
                Lire UserHeure
                Ecrire Quelle minute ?
@@ -185,7 +186,8 @@ Exercice 4.2 : Debut
                
 
 
-Exercice 4.3 : Debut
+Exercice 4.3 : Variables : UserHeure Usermin UserSec
+               Debut
                Ecrire Quelle heure est il ?
                Lire UserHeure
                Ecrire Quelle minute ?
@@ -203,33 +205,152 @@ Exercice 4.3 : Debut
                Ecrire "Dans une minutte, il sera " + "UserHeure" + " : " + "UserMin " + "et " + UserSec
                FIN
 
-Exercice 4.4 : 
+Exercice 4.4 : Variables : NP newvalue prix
+               Debut
+               Ecrire Nombre de photocopie ?
+               Lire NP
+               Si NP < 10
+               prix ← NP * 0.10
+               Si NP > 10 et NP < 30
+               newvalue ← NP - 10
+               newvalue ← newvalue * 0.09
+               prix ← newvalue + 1
+               Si NP > 30
+               NP ← NP - 30 
+               prix ← NP * 0.08 + 1 + 1.8  
+               Ecrire : Le prix et de " prix"
+               FIN
+               
 
+Exercice 4.5 : Variables : Age Sexe 
+               Debut : 
+               Ecrire Quelle age avez vous ?
+               Lire Age
+               Ecrire De quelle sexe êtes vous ?
+               Lire Sexe
+               Si 
+               Sexe === Homme && Age > 20
+               Alors
+               Ecrire Vous êtes imposable
+               Si
+               Sexe === Femme && age > 18 && age < 35
+               Alors
+               Ecrire Vous êtes imposable
+               Sinon 
+               Ecrire Vous êtes non imposable
+               FIN
 
-Exercice 4.5 :
+Exercice 4.6 : Variables : Candidat1 Candidat2 Candidat3 Candidat4 Somme
+               Ecrire Resultat du Candidat1 
+               Lire Candidat1
+               Ecrire Resultat du Candidat2 
+               Lire Candidat2
+               Ecrire Resultat du Candidat3 
+               Lire Candidat3
+               Ecrire Resultat du Candidat4 
+               Lire Candidat4
+               Somme = Candidat2 + Candidat3 + Candidat4
+               Si 
+               Candidat1 > 50% 
+               Alors
+               Ecrire Candidat élu
+               Si
+               Candidat1 < 12.5%
+               Alors
+               Ecire Candidat Battu
+               Si Candidat1 < 50% && Candidat1 > 12.5%
+               Alors 
+               Ecrire Candidat en balotage
+               Si Candidat1 > Somme && Candidat1 < 50%
+               Alors
+               Ecrire Candidat en tête du second tour
+               FIN
 
-Exercice 4.6 :
+Exercice 4.7 : Variables : Age Permis(oui/non) TempsPermis Accident  
+               Ecire Quelle age 
+               Lire Age
+               Ecire Permis
+               Lire Permis 
+               Ecrire Temps de Permis
+               Lire TempsPermis
+               Ecrire Nombre d'accidents 
+               Lire Accident
 
-Exercice 4.7 :
+Exercice 4.8 : Variables : Jour Mois Annee
+               Ecire Donne moi un Jour
+               Lire Jour
+               Ecrire Donne moi un mois 
+               Lire Mois
+               Ecrire Donne moi une année
+               Lire Annee
 
-Exercice 4.8 :
 
 
 
 
 PARTIE 5 – LES BOUCLES (https://ncode.amorce.org/ressources/Pool/TB_DEV/Accueil_Ecrire_algorithme_1/Exercices5.pdf) : ←
 
-Exercice 5.1 :
+Exercice 5.1 : Variables : UserValue
+               Debut
+               TantQue 
+               UserValue < 1 ou UserValue > 3
+               Ecrire Donne moi un nombre en 1 et 3
+               Lire UserValue
+               FinTantQue
+               Fin
 
-Exercice 5.2:
+Exercice 5.2: Variables : UserValue
+               Debut
+               TantQue 
+               UserValue < 10 ou UserValue > 20
+               Si 
+               UserHeure < 10
+               Ecire Plus grand !
+               Si
+               UserHeure > 20
+               Ecire Plus petit ! 
+               FinTantQue
+               Fin
 
-Exercice 5.3:
+Exercice 5.3:  Variables : UserValue i 
+               i ← 10 
+               Ecrire 
+               Donne moi un nombre 
+               Lire UserValue
+               TantQue i > 0
+               Ecire UserValue
+               UserHeure ← UserValue - 1
+               i ← i - 1
+               FinTantQue
+               Fin
 
-Exercice 5.4:
+Exercice 5.4: Variables : uservalue i add result
+              Début
+              i ← 10
+              Ecrire 
+              Donne moi un nombre
+              Lire uservalue
 
-Exercice 5.5 :
+              Pour i ← 0
+              result ← uservalue * add
+              Ecire result
+              
+              Fin
 
-Exercice 5.6 :
+
+Exercice 5.5 : Variables : UserValue i 
+               Début
+               Ecire Donne moi un nombre
+               Lire UserValue
+               i ← UserValue
+               TantQue i > 0
+               UserValue - 1
+               
+
+               
+
+
+Exercice 5.6 : 
 
 Exercice 5.7 :
 
