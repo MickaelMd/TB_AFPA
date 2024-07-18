@@ -5,19 +5,31 @@ btn.addEventListener("click", () => {
   display();
 });
 
-// let nouvelElement = document.createElement("div");
-// let parentElement = document.getElementById("conteneur");
-// parentElement.appendChild(nouvelElement);
-
-// ---------------------------
-
 function display() {
   fetch("data.json")
     .then((response) => response.json())
     .then((data) => {
       let previewDiv = document.querySelector(".preview");
       previewDiv.innerHTML = "";
-      // -----------------
+
+      // let nouvelElement = document.createElement("div");
+      // let parentElement = document.getElementById("conteneur");
+      // parentElement.appendChild(nouvelElement);
+
+      let restauInfoDiv = document.createElement("div");
+      restauInfoDiv.style.textAlign = "center";
+      restauInfoDiv.style.marginBottom = "20px";
+
+      let nomRestau = document.createElement("h1");
+      nomRestau.textContent = data.nom;
+      restauInfoDiv.appendChild(nomRestau);
+
+      let sloganRestau = document.createElement("p");
+      sloganRestau.textContent = data.slogan;
+      restauInfoDiv.appendChild(sloganRestau);
+      previewDiv.appendChild(restauInfoDiv);
+
+      // ---------------------------
 
       // let nomrestau = document.createElement("p");
       // nomrestau.textContent = data.nom;
@@ -29,6 +41,8 @@ function display() {
       // ----------------
       let pizzas = data.pizzas;
       previewDiv.style = "display : flex";
+      previewDiv.style.flexWrap = "wrap";
+      previewDiv.style.justifyContent = "center";
 
       pizzas.forEach((pizza) => {
         let cardDiv = document.createElement("div");
@@ -54,8 +68,12 @@ function display() {
         prix.textContent = `Prix: ${pizza.prix}`;
         cardDiv.appendChild(prix);
 
-        let garnitures = document.createElement("li");
-        garnitures.innerHTML = `${pizza.garnitures.join("<li>")}`;
+        let garnitures = document.createElement("ul");
+        pizza.garnitures.forEach((garniture) => {
+          let li = document.createElement("li");
+          li.textContent = garniture;
+          garnitures.appendChild(li);
+        });
         cardDiv.appendChild(garnitures);
       });
     });
