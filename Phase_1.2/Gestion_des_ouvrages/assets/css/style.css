@@ -24,3 +24,9 @@ section select {
 #cat_section {
   margin-top: 10px;
 }
+
+#displaycards {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
