@@ -8,17 +8,16 @@ cat_select = document.getElementById("categorie_select");
 
 window.addEventListener("load", (event) => {
   console.log("aut test");
-  // display_aut_slect();
+  display_aut_slect();
   // tri_aut_list();
-  test();
 });
 
-function test(list) {
-  let data = books.json(jstring);
-  return data.authors.filter((item, index) => list.indexOf(item) === index);
-}
+// function test(list) {
+//   let data = books.json(jstring);
+//   return data.authors.filter((item, index) => list.indexOf(item) === index);
+// }
 
-console.log(test(list));
+// console.log(test(list));
 
 // window.addEventListener("load", (event) => {
 //   console.log("cat test");
@@ -65,3 +64,7 @@ console.log(test(list));
 // .then((response) => response.json())
 // .then((data) => {});
 // }
+
+// -------------------------------
+
+// Fonction pour charger et traiter le fichier JSON
