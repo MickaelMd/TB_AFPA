@@ -27,6 +27,8 @@ section select {
 
 #displaycards {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   margin-top: 40px;
+  border: 1px solid black;
+  height: 300px;
 }
