@@ -60,3 +60,11 @@ authors_select.addEventListener("click", () => {
 // }
 
 // gencard();
+
+function testdisplay() {
+  fetch("assets/json/books.json").then((response) =>
+    response.json().then((date) => {
+      let test = 0;
+    })
+  );
+}
