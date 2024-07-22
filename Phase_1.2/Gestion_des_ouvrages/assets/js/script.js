@@ -1,70 +1,8 @@
-let aut_select;
-let cat_select;
+const reponse = await fetch("assets/json/books.json");
+const data = await reponse.json();
 
-// fetch("books.json").then((reponse) => console.table(reponse));
+const list_authors = data.map((data) => data.authors);
+const list_cetegories = data.map((data) => data.categories);
 
-aut_select = document.getElementById("auteurs_select");
-cat_select = document.getElementById("categorie_select");
-
-window.addEventListener("load", (event) => {
-  console.log("aut test");
-  display_aut_slect();
-  // tri_aut_list();
-});
-
-// function test(list) {
-//   let data = books.json(jstring);
-//   return data.authors.filter((item, index) => list.indexOf(item) === index);
-// }
-
-// console.log(test(list));
-
-// window.addEventListener("load", (event) => {
-//   console.log("cat test");
-//   display_cat_slect();
-// });
-
-// function tri_aut_list() {
-// fetch("books.json")
-// .then((response) => response.json())
-// .then((data) => {
-// data.forEach((data) => {
-// console.log(data.authors);
-// let newdata = data.filter((c, index) => {
-// return data.authors(c) !== index;
-// console.log(newdata);
-// });
-// });
-// });
-// }
-
-// console.log(tri_aut_list());
-
-// let i = 0;
-
-// function display_aut_slect() {
-//   fetch("books.json")
-//     .then((response) => response.json())
-//     .then((data) => {
-//       data.forEach((data) => {
-//         let name = document.createElement("option");
-//         // i++;
-//         name.text = data.authors.join(", ");
-//         aut_select.add(name);
-//         console.log(data.authors);
-//         // console.log(i);
-//       });
-//     });
-// }
-
-// --------------------------------------------------
-
-// function tri_aut_list() {
-// fetch("books.json")
-// .then((response) => response.json())
-// .then((data) => {});
-// }
-
-// -------------------------------
-
-// Fonction pour charger et traiter le fichier JSON
+console.log(list_authors.length);
+console.log(list_cetegories.lvalue);
