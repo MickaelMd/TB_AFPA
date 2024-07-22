@@ -16,15 +16,15 @@ console.log(newlist_categories);
 const authors_select = document.getElementById("auteurs_select");
 const categorie_select = document.getElementById("categorie_select");
 
-newlist_authors.forEach((newlist_authors) => {
+newlist_authors.forEach((author) => {
   let name = document.createElement("option");
-  name.text = newlist_authors;
+  name.text = author;
   authors_select.add(name);
 });
 
-newlist_categories.forEach((newlist_categories) => {
+newlist_categories.forEach((category) => {
   let cate = document.createElement("option");
-  cate.text = newlist_categories;
+  cate.text = category;
   categorie_select.add(cate);
 });
 
@@ -36,30 +36,37 @@ authors_select.addEventListener("click", () => {
   categorie_select.value = "";
 });
 
-// document.getElementById("displaycards").innerHTML = "";
-
-// test ----------------------------
-
 function testdisplay(data) {
-  fetch("assets/json/books.json")
-    .then((response) => response.json())
-    .then((data) => {
-      let listelivres = document.getElementById("displaycards");
-      listelivres.innerHTML = "";
+  let listelivres = document.getElementById("displaycards");
+  listelivres.innerHTML = "";
 
-      let listediv = document.createElement("div");
-      data.forEach(() => {
-        let displaybook = document.createElement("div");
-        displaybook.className = "card";
-        listelivres.appendChild(displaybook);
+  data.forEach((book) => {
+    let displaybook = document.createElement("div");
+    displaybook.className = "card";
+    listelivres.appendChild(displaybook);
 
-        let nomlivre = document.createElement("h4");
-        nomlivre.textContent = `titre: ${data[1].title}`;
-        listelivres.appendChild(nomlivre);
-      });
-    });
+    let thumbnail = document.createElement("img");
+    thumbnail.src = book.thumbnailUrl;
+    thumbnail.alt = book.title;
+    thumbnail.className = "thumbnail";
+    displaybook.appendChild(thumbnail);
+
+    let nomlivre = document.createElement("h4");
+    nomlivre.textContent = `Titre: ${book.title}`;
+    displaybook.appendChild(nomlivre);
+
+    let auteur = document.createElement("p");
+    auteur.textContent = `Auteur(s): ${book.authors.join(", ")}`;
+    displaybook.appendChild(auteur);
+
+    let categorie = document.createElement("p");
+    categorie.textContent = `Catégorie(s): ${book.categories.join(", ")}`;
+    displaybook.appendChild(categorie);
+
+    let description = document.createElement("p");
+    description.textContent = `Description: ${book.shortDescription}`;
+    displaybook.appendChild(description);
+  });
 }
 
-testdisplay();
-
-// ---------------------------------------
+testdisplay(data);
