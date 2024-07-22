@@ -38,33 +38,28 @@ authors_select.addEventListener("click", () => {
 
 // document.getElementById("displaycards").innerHTML = "";
 
-// test
+// test ----------------------------
 
-// function gencard() {
-//   fetch("assets/json/books.json")
-//     .then((response) => response.json())
-//     .then((data) => {
-//       let cardDiv = document.getElementById("displaycards");
-//       cardDiv.innerHTML = "";
-//       data.forEach(() => {
-//         let cardbook = document.createElement("Div");
-//         cardbook.className = "cardbook";
-//         cardDiv.appendChild(cardbook);
+function testdisplay(data) {
+  fetch("assets/json/books.json")
+    .then((response) => response.json())
+    .then((data) => {
+      let listelivres = document.getElementById("displaycards");
+      listelivres.innerHTML = "";
 
-//         let img = document.createElement("p");
-//         img.textContent = data.thumbnailUrl;
-//         console.log("test");
-//         cardDiv.appendChild(img);
-//       });
-//     });
-// }
+      let listediv = document.createElement("div");
+      data.forEach(() => {
+        let displaybook = document.createElement("div");
+        displaybook.className = "card";
+        listelivres.appendChild(displaybook);
 
-// gencard();
-
-function testdisplay() {
-  fetch("assets/json/books.json").then((response) =>
-    response.json().then((date) => {
-      let test = 0;
-    })
-  );
+        let nomlivre = document.createElement("h4");
+        nomlivre.textContent = `titre: ${data[1].title}`;
+        listelivres.appendChild(nomlivre);
+      });
+    });
 }
+
+testdisplay();
+
+// ---------------------------------------
