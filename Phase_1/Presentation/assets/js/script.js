@@ -13,5 +13,11 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
-let btn_nav = document.getElementById("toggle_nav");
-let nav = document.getElementById("navbar");
+document.addEventListener("DOMContentLoaded", function () {
+  const toggleButton = document.getElementById("toggle_nav");
+  const navbar = document.getElementById("navbar");
+
+  toggleButton.addEventListener("click", function () {
+    navbar.classList.toggle("hidden");
+  });
+});
