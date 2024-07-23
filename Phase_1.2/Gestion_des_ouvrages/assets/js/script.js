@@ -38,7 +38,7 @@ authors_select.addEventListener("click", () => {
 
 // ----------------------------------------------------
 
-// function filtre() {}
+// function filter() {}
 
 // ----------------------------------------------------
 
@@ -54,15 +54,30 @@ function displaybook(data) {
     // ---------------------------------------
 
     let thumbnail = document.createElement("img");
-    // if (book.thumbnailUrl == undefined) {
+    let imgselect = document.querySelector("img");
+
+    thumbnail.src = book.thumbnailUrl;
+    displaybook.appendChild(thumbnail);
+
+    // if (thumbnail.src)
+
+    // imgselect.forEach((ele) => {
+    //   ele.addEventListener("error", (e) => {
+    //     e.target.src =
+    //       "https://p1.storage.canalblog.com/14/48/1145642/91330992_o.png";
+    //   });
+    // });
+
+    // if (book.thumbnailUrl == "") {
     //   thumbnail.src =
     //     "https://p1.storage.canalblog.com/14/48/1145642/91330992_o.png";
     // } else {
     //   thumbnail.src = book.thumbnailUrl;
     //   displaybook.appendChild(thumbnail);
     // }
-    thumbnail.src = book.thumbnailUrl;
-    displaybook.appendChild(thumbnail);
+    // ---------------
+    // thumbnail.src = book.thumbnailUrl;
+    // displaybook.appendChild(thumbnail);
 
     console.log(book.thumbnailUrl);
 
