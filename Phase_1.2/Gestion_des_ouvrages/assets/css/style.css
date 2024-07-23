@@ -27,7 +27,18 @@ section select {
 
 #displaycards {
   display: flex;
+  width: auto;
   flex-direction: column;
   margin-top: 40px;
   border: 1px solid black;
+}
+
+.card {
+  border: 1px black solid;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  /* display: ; */
 }
