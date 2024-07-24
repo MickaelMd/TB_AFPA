@@ -13,12 +13,17 @@ const newlist_categories = [...new Set(all_categories)];
 newlist_categories.sort((a, b) => a.localeCompare(b));
 // console.log(newlist_categories);
 
-const list_date = data.map((book) => book.publishedDate);
+const list_date = data.map((book) => {
+  if (book.publishedDate && book.publishedDate.dt_txt) {
+    const date = new Date(book.publishedDate.dt_txt);
+    const day = String(date.getDate()).padStart(2, "0");
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
+  return null;
+});
 console.log(list_date);
-// const format_date = [].concat(...list_date);
-// const newlist_date = [...new Set(format_date)];
-// // newlist_date.sort
-// console.log(newlist_date);
 
 const authors_select = document.getElementById("auteurs_select");
 const categorie_select = document.getElementById("categorie_select");
@@ -35,19 +40,48 @@ newlist_categories.forEach((category) => {
   categorie_select.add(cate);
 });
 
-categorie_select.addEventListener("click", () => {
+// categorie_select.addEventListener("click", () => {
+//   authors_select.value = "";
+//   console.log(categorie_select.value);
+// });
+
+// authors_select.addEventListener("click", () => {
+//   categorie_select.value = "";
+//   console.log(authors_select.value);
+// });
+
+categorie_select.addEventListener("change", () => {
   authors_select.value = "";
-  console.log(categorie_select.value);
+  filterBooks();
 });
 
-authors_select.addEventListener("click", () => {
+authors_select.addEventListener("change", () => {
   categorie_select.value = "";
-  console.log(authors_select.value);
+  filterBooks();
 });
 
 // ----------------------------------------------------
 
-// function filter() {}
+function filterBooks() {
+  const selectedAuthor = authors_select.value;
+  const selectedCategory = categorie_select.value;
+
+  let filteredData = data;
+
+  if (selectedAuthor) {
+    filteredData = filteredData.filter((book) =>
+      book.authors.includes(selectedAuthor)
+    );
+  }
+
+  if (selectedCategory) {
+    filteredData = filteredData.filter((book) =>
+      book.categories.includes(selectedCategory)
+    );
+  }
+
+  displaybook(filteredData);
+}
 
 // ----------------------------------------------------
 
@@ -63,17 +97,30 @@ function displaybook(data) {
     // ------------------------------------- =>
 
     let thumbnail = document.createElement("img");
-
-    thumbnail.src = book.thumbnailUrl;
-    displaybook.appendChild(thumbnail);
-
-    if (book.thumbnailUrl == undefined) {
+    if (book.thumbnailUrl) {
+      thumbnail.src = book.thumbnailUrl;
+    } else {
       thumbnail.src =
         "https://p1.storage.canalblog.com/14/48/1145642/91330992_o.png";
-    } else {
-      thumbnail.src = book.thumbnailUrl;
-      displaybook.appendChild(thumbnail);
     }
+    thumbnail.onerror = function () {
+      this.src =
+        "https://p1.storage.canalblog.com/14/48/1145642/91330992_o.png";
+    };
+    displaybook.appendChild(thumbnail);
+
+    // let thumbnail = document.createElement("img");
+
+    // thumbnail.src = book.thumbnailUrl;
+    // displaybook.appendChild(thumbnail);
+
+    // if (book.thumbnailUrl == undefined) {
+    //   thumbnail.src =
+    //     "https://p1.storage.canalblog.com/14/48/1145642/91330992_o.png";
+    // } else {
+    //   thumbnail.src = book.thumbnailUrl;
+    //   displaybook.appendChild(thumbnail);
+    // }
 
     // if (thumbnail.src)
 
@@ -106,13 +153,18 @@ function displaybook(data) {
     let isbn = document.createElement("p");
     isbn.textContent = `ISBN : ${book.isbn}`;
     displaybook.appendChild(isbn);
+
     // ------------- =>
+
     let datepubli = document.createElement("p");
-    if (book.publishedDate == null) {
-      datepubli.textContent = "";
+    if (book.publishedDate && book.publishedDate.dt_txt) {
+      const date = new Date(book.publishedDate.dt_txt);
+      const jour = String(date.getDate()).padStart(2, "0");
+      const mois = String(date.getMonth() + 1).padStart(2, "0");
+      const annee = date.getFullYear();
+      datepubli.textContent = `Date de publication : ${jour}/${mois}/${annee}`;
     } else {
-      datepubli.textContent = `Date de publication : ${book.publishedDate.dt_txt}`;
-      // datepubli.textContent = `Date de publication : ${date.book.publishedDate.dt_txt.setUTCDate()}`;
+      datepubli.textContent = "";
     }
     displaybook.appendChild(datepubli);
 
