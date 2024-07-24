@@ -13,6 +13,13 @@ const newlist_categories = [...new Set(all_categories)];
 newlist_categories.sort((a, b) => a.localeCompare(b));
 // console.log(newlist_categories);
 
+const list_date = data.map((book) => book.publishedDate);
+console.log(list_date);
+// const format_date = [].concat(...list_date);
+// const newlist_date = [...new Set(format_date)];
+// // newlist_date.sort
+// console.log(newlist_date);
+
 const authors_select = document.getElementById("auteurs_select");
 const categorie_select = document.getElementById("categorie_select");
 
@@ -30,10 +37,12 @@ newlist_categories.forEach((category) => {
 
 categorie_select.addEventListener("click", () => {
   authors_select.value = "";
+  console.log(categorie_select.value);
 });
 
 authors_select.addEventListener("click", () => {
   categorie_select.value = "";
+  console.log(authors_select.value);
 });
 
 // ----------------------------------------------------
@@ -51,13 +60,20 @@ function displaybook(data) {
     displaybook.className = "card";
     listelivres.appendChild(displaybook);
 
-    // ---------------------------------------
+    // ------------------------------------- =>
 
     let thumbnail = document.createElement("img");
-    let imgselect = document.querySelector("img");
 
     thumbnail.src = book.thumbnailUrl;
     displaybook.appendChild(thumbnail);
+
+    if (book.thumbnailUrl == undefined) {
+      thumbnail.src =
+        "https://p1.storage.canalblog.com/14/48/1145642/91330992_o.png";
+    } else {
+      thumbnail.src = book.thumbnailUrl;
+      displaybook.appendChild(thumbnail);
+    }
 
     // if (thumbnail.src)
 
@@ -79,7 +95,7 @@ function displaybook(data) {
     // thumbnail.src = book.thumbnailUrl;
     // displaybook.appendChild(thumbnail);
 
-    console.log(book.thumbnailUrl);
+    // console.log(book.thumbnailUrl);
 
     // ---------------------------------------
 
@@ -90,7 +106,7 @@ function displaybook(data) {
     let isbn = document.createElement("p");
     isbn.textContent = `ISBN : ${book.isbn}`;
     displaybook.appendChild(isbn);
-
+    // ------------- =>
     let datepubli = document.createElement("p");
     if (book.publishedDate == null) {
       datepubli.textContent = "";

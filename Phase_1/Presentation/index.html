@@ -17,6 +17,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <script src="assets/js/script.js" defer></script>
     <title>Présentation TB</title>
   </head>
@@ -63,7 +65,7 @@
     <a href="http://" target="_blank" rel="noopener noreferrer"></a>
     <section id="exercicesjs">
       <h1 class="font_title">Exercices Javascript</h1>
-      <div class="cardsjs">
+      <div class="cardsjs" data-aos="fade-up">
         <div id="jsgen" class="cards">
           <h3 class="font_title">
             Exercices Général <br /><img src="src/icons8-star-48.png" />
@@ -77,7 +79,6 @@
             ><button class="buttoncard">Voir la page</button></a
           >
         </div>
-
         <div id="jsgen" class="cards">
           <h3 class="font_title">Exercice Function</h3>
           <p class="font_text">
@@ -124,16 +125,16 @@
       <h1 class="font_title">Evaluation</h1>
       <div id="list_eval">
         <a href="/Phase_1/Evaluation/Exercice_1/index.html"
-          ><button>Exercice 1</button></a
+          ><button data-aos="fade-right">Exercice 1</button></a
         >
         <a href="/Phase_1/Evaluation/Exercice_2/index.html"
-          ><button>Exercice 2</button></a
+          ><button data-aos="fade-left">Exercice 2</button></a
         >
         <a href="/Phase_1/Evaluation/Exercice_3/index.html"
-          ><button>Exercice 3</button></a
+          ><button data-aos="fade-right">Exercice 3</button></a
         >
         <a href="/Phase_1/Evaluation/Exercice_4/index.html"
-          ><button>Exercice 4</button></a
+          ><button data-aos="fade-left">Exercice 4</button></a
         >
       </div>
     </section>
@@ -141,7 +142,7 @@
     <section id="algo_section">
       <h1 id="algo_link">Exercices Algo</h1>
 
-      <div id="list_algo">
+      <div id="list_algo" data-aos="flip-left">
         <button type="button" class="collapsible font_title">
           PARTIE 1 – LES VARIABLES
         </button>

@@ -21,3 +21,5 @@ document.addEventListener("DOMContentLoaded", function () {
     navbar.classList.toggle("hidden");
   });
 });
+
+AOS.init();
