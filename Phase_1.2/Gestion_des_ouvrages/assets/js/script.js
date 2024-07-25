@@ -5,13 +5,11 @@ const list_authors = data.map((book) => book.authors);
 const all_authors = [].concat(...list_authors);
 const newlist_authors = [...new Set(all_authors)];
 newlist_authors.sort((a, b) => a.localeCompare(b));
-// console.log(newlist_authors);
 
 const list_categories = data.map((book) => book.categories);
 const all_categories = [].concat(...list_categories);
 const newlist_categories = [...new Set(all_categories)];
 newlist_categories.sort((a, b) => a.localeCompare(b));
-// console.log(newlist_categories);
 
 const list_date = data.map((book) => {
   if (book.publishedDate && book.publishedDate.dt_txt) {
@@ -40,16 +38,6 @@ newlist_categories.forEach((category) => {
   categorie_select.add(cate);
 });
 
-// categorie_select.addEventListener("click", () => {
-//   authors_select.value = "";
-//   console.log(categorie_select.value);
-// });
-
-// authors_select.addEventListener("click", () => {
-//   categorie_select.value = "";
-//   console.log(authors_select.value);
-// });
-
 categorie_select.addEventListener("change", () => {
   authors_select.value = "";
   filterBooks();
@@ -59,8 +47,6 @@ authors_select.addEventListener("change", () => {
   categorie_select.value = "";
   filterBooks();
 });
-
-// ----------------------------------------------------
 
 function filterBooks() {
   const selectedAuthor = authors_select.value;
@@ -83,8 +69,6 @@ function filterBooks() {
   displaybook(filteredData);
 }
 
-// ----------------------------------------------------
-
 function displaybook(data) {
   let listelivres = document.getElementById("displaycards");
   listelivres.innerHTML = "";
@@ -93,8 +77,6 @@ function displaybook(data) {
     let displaybook = document.createElement("div");
     displaybook.className = "card";
     listelivres.appendChild(displaybook);
-
-    // ------------------------------------- =>
 
     let thumbnail = document.createElement("img");
     if (book.thumbnailUrl) {
@@ -109,43 +91,6 @@ function displaybook(data) {
     };
     displaybook.appendChild(thumbnail);
 
-    // let thumbnail = document.createElement("img");
-
-    // thumbnail.src = book.thumbnailUrl;
-    // displaybook.appendChild(thumbnail);
-
-    // if (book.thumbnailUrl == undefined) {
-    //   thumbnail.src =
-    //     "https://p1.storage.canalblog.com/14/48/1145642/91330992_o.png";
-    // } else {
-    //   thumbnail.src = book.thumbnailUrl;
-    //   displaybook.appendChild(thumbnail);
-    // }
-
-    // if (thumbnail.src)
-
-    // imgselect.forEach((ele) => {
-    //   ele.addEventListener("error", (e) => {
-    //     e.target.src =
-    //       "https://p1.storage.canalblog.com/14/48/1145642/91330992_o.png";
-    //   });
-    // });
-
-    // if (book.thumbnailUrl == "") {
-    //   thumbnail.src =
-    //     "https://p1.storage.canalblog.com/14/48/1145642/91330992_o.png";
-    // } else {
-    //   thumbnail.src = book.thumbnailUrl;
-    //   displaybook.appendChild(thumbnail);
-    // }
-    // ---------------
-    // thumbnail.src = book.thumbnailUrl;
-    // displaybook.appendChild(thumbnail);
-
-    // console.log(book.thumbnailUrl);
-
-    // ---------------------------------------
-
     let nomlivre = document.createElement("h4");
     nomlivre.textContent = `${book.title}`;
     displaybook.appendChild(nomlivre);
@@ -153,8 +98,6 @@ function displaybook(data) {
     let isbn = document.createElement("p");
     isbn.textContent = `ISBN : ${book.isbn}`;
     displaybook.appendChild(isbn);
-
-    // ------------- =>
 
     let datepubli = document.createElement("p");
     if (book.publishedDate && book.publishedDate.dt_txt) {
@@ -193,8 +136,5 @@ function displaybook(data) {
     displaybook.appendChild(description);
   });
 }
-
-// ----------------------------------------------------
-// ----------------------------------------------------
 
 displaybook(data);
