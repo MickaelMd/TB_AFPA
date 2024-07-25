@@ -1,71 +1,21 @@
-/* body {
+body {
   font-family: "Roboto", sans-serif;
   background-color: #333;
   color: white;
-  /* margin: 3% 10% 0% 10%; 
+  margin: 3% 10% 0% 10%;
   padding: 0;
-} */
-/*
-header {
-  background-color: black;
-  padding: 1em;
-  text-align: center;
 }
 
-header h1 {
-  color: yellow;
-  font-size: 2em;
+#img_nav_mid {
+  margin-top: -15px !important;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+#img_l_nav {
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0px 20px 0px;
+.link-warning:hover {
+  color: white !important;
 }
-
-nav ul li {
-  display: inline;
-  margin-right: 1em;
-  margin-top: 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  border: 1px solid rgb(202, 202, 0);
-  border-radius: 10px;
-  padding: 4px 10px 4px 10px;
-}
-
-li a:hover {
-  transition: 80ms;
-}
-
-#mov_link:hover {
-  background-color: blue;
-}
-
-#peo_link:hover {
-  background-color: green;
-}
-
-#pla_link:hover {
-  background-color: red;
-}
-.img_gal {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-top: 2em;
-}
-
-.img_gal img {
-  width: 30%;
-  border: 2px solid white;
-} */
-/* 
-/* @media screen and (min-width: 992px) {
-  .nav-item {
-    line-height: 80px;
-  }
-} */
