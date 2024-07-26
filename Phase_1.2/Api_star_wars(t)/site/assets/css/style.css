@@ -2,8 +2,9 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #333;
   color: white;
-  margin: 3% 10% 0% 10%;
+  margin: 3% 10% 0% 10% !important;
   padding: 0;
+  top: 0;
 }
 
 #img_nav_mid {
@@ -18,4 +19,9 @@ body {
 
 .link-warning:hover {
   color: white !important;
+}
+
+.navbar {
+  margin: 3% 10% 0% 10% !important;
+  width: 80%;
 }
