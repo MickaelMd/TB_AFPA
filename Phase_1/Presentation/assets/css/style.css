@@ -386,4 +386,25 @@ footer a:hover {
     padding: 5px 10px 5px 10px;
     margin: 0px 5px 0px 5px;
   }
+  #exercicesjs {
+    margin: 5% 3% 0% 3%;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  li a {
+    padding: 1px;
+    font-size: 15px;
+  }
+  nav ul {
+    padding: 5px 10px 5px 10px;
+    margin: 0px 5px 0px 5px;
+  }
+  header h1 {
+    font-size: 45px;
+  }
+  header p {
+    font-size: 8px;
+    margin-left: 10px;
+  }
 }
